@@ -1,0 +1,30 @@
+{{#with data}}
+  <div class='col plans-card'>
+    <div class='card'>
+      <div class='card-header'>
+        <span>{{name}}</span>
+      </div>
+      <div class='card-body'>
+        <div class='card-price'>
+          <span class='card-price-amount'>${{price}}</span>
+          <span class='card-price-duration'>
+            / mo
+          </span>
+        </div>
+
+        <div class='card-description'>
+          {{#each features}}
+            <span class='card-description-item'>{{this}}</span>
+          {{/each}}
+        </div>
+        <div>
+          <button type='button' class='btn {{#if @first}}btn-outline-primary{{else}}btn-primary{{/if}} card-button'>{{button}}</button>
+        </div>
+        
+      </div>
+      
+    </div>
+
+  </div>
+{{/with}}
+
